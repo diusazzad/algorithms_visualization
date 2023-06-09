@@ -23,7 +23,7 @@
             <x-searchBar></x-searchBar>
         </div>
 
-        <div class="grid grid-cols-4 gap-2 mt-4 ml-4 border ">
+        <div class="grid grid-cols-3 gap-2 mt-4 ml-4 border " id="main">
             <div class="" id="sequentialAlgorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Sequential Algorithms:</h2>
@@ -201,6 +201,26 @@
                         <li class="pl-5"><a class="" href="#insertion-sort">Randomized Primality Testing
 
 
+                            </a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            {{--  --}}
+
+            <div class="" id="Divide and Conquer Algorithms">
+                <div class="border p-1 m-1 rounded">
+                    <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Heuristic Algorithms:
+
+
+                    </h2>
+                    <ul id="dot" class="tab-size-ul">
+                        <li class="pl-5"><a class="" href="#bubble-sort">Local Search Algorithms
+                            </a></li>
+                        <li class="pl-5"><a class="" href="#insertion-sort">Genetic Algorithms
+                            </a></li>
+                        <li class="pl-5"><a class="" href="#insertion-sort">Ant Colony Optimization
                             </a></li>
 
                     </ul>
