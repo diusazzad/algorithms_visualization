@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\linearSearch;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/linear-search', [linearSearch::class, 'search'])->name('linear-search');
+
+Route::post('/linear-search', [LinearSearchController::class, 'search'])->name('linear-search');
+
+// Route::fallback(function () {
+//     return view('error');
+// });
