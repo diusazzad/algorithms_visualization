@@ -23,8 +23,8 @@
             <x-searchBar></x-searchBar>
         </div>
 
-        <div class="grid grid-cols-3 gap-2 mt-4 ml-4 border " id="main">
-            <div class="" id="sequentialAlgorithms">
+        <div class="grid grid-cols-3 gap-2 mt-4 ml-4 border-2 rounded " id="main">
+            <div class="shadow-2xl rounded " id="sequentialAlgorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Sequential Algorithms:</h2>
                     <ul>
@@ -43,7 +43,7 @@
             </div>
 
 
-            <div class="" id="recursiveAlgorithm">
+            <div class="shadow-2xl rounded " id="recursiveAlgorithm">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Recursive Algorithms:</h2>
                     <ul id="dot" class="tab-size-ul">
@@ -55,7 +55,7 @@
             </div>
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Divide and Conquer Algorithms:</h2>
                     <ul id="dot" class="tab-size-ul">
@@ -70,7 +70,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Greedy Algorithms:</h2>
                     <ul id="dot" class="tab-size-ul">
@@ -85,7 +85,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Dynamic Programming Algorithms:</h2>
                     <ul id="dot" class="tab-size-ul">
@@ -104,7 +104,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Backtracking Algorithms:
                     </h2>
@@ -122,7 +122,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Graph Algorithms:
                     </h2>
@@ -151,7 +151,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">String Matching Algorithms:
                     </h2>
@@ -170,7 +170,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Computational Geometry Algorithms::
                     </h2>
@@ -190,7 +190,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Randomized Algorithms:
 
@@ -209,7 +209,7 @@
 
             {{--  --}}
 
-            <div class="" id="Divide and Conquer Algorithms">
+            <div class="shadow-2xl rounded " id="Divide and Conquer Algorithms">
                 <div class="border p-1 m-1 rounded">
                     <h2 class="text-2xl font-bold mb-4 border p-1 m-1 rounded">Heuristic Algorithms:
 

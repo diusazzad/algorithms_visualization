@@ -23,6 +23,9 @@ Route::get('/linear-search', [linearSearch::class, 'search'])->name('linear-sear
 
 Route::post('/linear-search', [LinearSearchController::class, 'search'])->name('linear-search');
 
+// bubble sort
+
+
 // Route::fallback(function () {
 //     return view('error');
 // });
