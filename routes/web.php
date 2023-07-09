@@ -22,11 +22,11 @@ Route::get('/', function () {
 
 Route::get('/linear-search', [linearSearch::class, 'search'])->name('linear-search');
 
-Route::post('/linear-search', [LinearSearchController::class, 'search'])->name('linear-search');
+// Route::post('/linear-search', [LinearSearchController::class, 'search'])->name('linear-search');
 
 // bubble sort
 Route::get('/bubble-sort',[bubbleSort::class,'bubbleSort']);
 
-// Route::fallback(function () {
-//     return view('error');
-// });
+Route::fallback(function () {
+    return view('error');
+});
