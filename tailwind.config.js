@@ -28,6 +28,11 @@ module.exports = {
                 '17xl': '15rem', // Customize h11
                 '18xl': '16rem', // Customize h12
               },
+              fontFamily: {
+                sans: ['Nunito', 'Arial', 'sans-serif'],
+                serif: ['Times New Roman', 'serif'],
+                // Add more font families as needed
+              },
         },
 
 

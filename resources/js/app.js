@@ -1,15 +1,30 @@
-import './bootstrap';
+// import './bootstrap';
+
+// import { createApp } from 'vue';
+
+// const app = createApp({});
+
+// import ExampleComponent from './components/ExampleComponent.vue';
+// app.component('example-component', ExampleComponent);
+
+// import NavBar from './components/navbar.vue';
+// app.component('navbar',NavBar);
+
+
+
+// app.mount('#app');
+
+require('./bootstrap');
+
+// require('alpinejs');
 
 import { createApp } from 'vue';
+import router from './router'
 
-const app = createApp({});
+import CompaniesIndex from '@/components/companies/CompaniesIndex.vue';
 
-import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
-
-import NavBar from './components/navbar.vue';
-app.component('navbar',NavBar);
-
-
-
-app.mount('#app');
+createApp({
+    components: {
+        CompaniesIndex
+    }
+}).use(router).mount('#app')

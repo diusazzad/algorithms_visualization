@@ -20,12 +20,40 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/linear-search', [linearSearch::class, 'search'])->name('linear-search');
 
-// Route::post('/linear-search', [LinearSearchController::class, 'search'])->name('linear-search');
+Route::get('/list', function () {
+    return view('list');
+});
 
-// bubble sort
-Route::get('/bubble-sort',[bubbleSort::class,'bubbleSort']);
+
+// ----------------------------------------------------------------
+// Login
+Route::post('/login', [LoginController::class, 'login'])->middleware('auth');
+// Registration
+Route::post('/register', [RegisterController::class, 'register'])->middleware('guest');
+
+// Routes accessible only to superadmin and admin users
+Route::group(['middleware' => ['auth', 'superadmin', 'admin']], function () {
+    // ...
+});
+
+// Routes accessible only to editor users
+Route::group(['middleware' => ['auth', 'admin']], function () {
+    // ...
+});
+
+// Routes accessible only to superadmin and admin users
+Route::group(['middleware' => ['auth', 'editor']], function () {
+    // ...
+});
+
+// Routes accessible only to editor users
+Route::group(['middleware' => ['auth', 'user']], function () {
+    // ...
+});
+
+
+
 
 Route::fallback(function () {
     return view('error');
