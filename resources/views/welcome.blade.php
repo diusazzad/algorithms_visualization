@@ -23,8 +23,8 @@
         <div class="h-full" id="lsf">
             <div class=" gap-4 flex content-center text-4xl justify-center" id="nav">
                 <a href="{{ url('list') }}" class="">Algorithms</a>
-                <a href="" class="">Login</a>
-                <a href="" class="">Register</a>
+                <a href="{{ route('auth.login') }}" class="">Login</a>
+                <a href="{{ route('auth.register') }}" class="">Register</a>
 
             </div>
 
