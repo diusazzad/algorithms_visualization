@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SuperAdminController;
 use App\Http\Controllers\Auth\UserController;
+use App\Http\Controllers\SuperAdminRoleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,17 @@ Route::post('/register', [RegisterController::class, 'register']);
 // Routes for Super Admin Dashboard
 Route::middleware(['auth', 'role:superadmin'])->group(function () {
     Route::get('/superadmin/dashboard', [SuperAdminController::class, 'dashboard'])->name('auth.superadmin.dashboard');
+
+    // Assign roles
+    Route::resource('/superadmin/roles', SuperAdminRoleController::class)->names([
+        'index' => 'auth.superadmin.roles.index',
+        'create' => 'auth.superadmin.roles.create',
+        'store' => 'auth.superadmin.roles.store',
+        'show' => 'auth.superadmin.roles.show',
+        'edit' => 'auth.superadmin.roles.edit',
+        'update' => 'auth.superadmin.roles.update',
+        'destroy' => 'auth.superadmin.roles.destroy',
+    ]);
 });
 
 // Routes for Admin Dashboard
