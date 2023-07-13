@@ -38,15 +38,8 @@ Route::middleware(['auth', 'role:superadmin'])->group(function () {
     Route::get('/superadmin/dashboard', [SuperAdminController::class, 'dashboard'])->name('auth.superadmin.dashboard');
 
     // Assign roles
-    Route::resource('/superadmin/roles', SuperAdminRoleController::class)->names([
-        'index' => 'auth.superadmin.roles.index',
-        'create' => 'auth.superadmin.roles.create',
-        'store' => 'auth.superadmin.roles.store',
-        'show' => 'auth.superadmin.roles.show',
-        'edit' => 'auth.superadmin.roles.edit',
-        'update' => 'auth.superadmin.roles.update',
-        'destroy' => 'auth.superadmin.roles.destroy',
-    ]);
+    Route::resource('superadmin/roles', SuperAdminRoleController::class);
+
 });
 
 // Routes for Admin Dashboard
