@@ -7,6 +7,9 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SuperAdminController;
 use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\SuperAdminRoleController;
+use App\Http\Controllers\User\AlgorithmController;
+use App\Http\Controllers\User\DashboardController;
+use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -55,6 +58,21 @@ Route::middleware(['auth', 'role:editor'])->group(function () {
 // Routes for User Dashboard
 Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('auth.user.dashboard');
+    // Dashboard
+    Route::get('/user/dashboard/view',[DashboardController::class,'view'])->name('user.dashboard');
+    // Algorithm
+    Route::get('/user/dashboard/algorithms',[AlgorithmController::class,'dashboard'])->name('user.algorithms');
+    // Route::get('/user/dashboard/algorithms',[AlgorithmController::class,'algorithmsearch']);
+    Route::get('/user/dashboard/algorithms/action',[AlgorithmController::class,'algorithmsearch'])->name('user.algorithmsearch');
+    // Community
+
+    // Task
+
+    // Profile
+    Route::get('/user/dashboard/profile', [ProfileController::class, 'profile'])->name('user.profile'); //Profile
+    Route::get('/user/dashboard/settings', [ProfileController::class, 'settings'])->name('user.settings'); //Setting
+
+    Route::get('/logout', [\App\Http\Controllers\User\UserController::class, 'logout'])->name('user.logout');  //Logout
 });
 
 

@@ -13,6 +13,9 @@ export default {
             'xl': '1280px',
             '2xl': '1536px',
           },
+          minHeight: {
+            '1/2': '50%',
+          }
           fontSize: {
             '7xl': '5rem', // Customize h1
             '8xl': '6rem', // Customize h2
