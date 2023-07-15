@@ -6,19 +6,18 @@ Idea
 
     
 Feature We Implemented, 
-    * Landing Page
-    * Login and Registration Page
-    * Multiple Role Based  Users
-    * Super Admin
-         * Dashboard
-         * CRUD Operation
-         * Super Admin can assign role, email,name and password
-     * Admin
-     * Editor
-     * User
-         * Dashboard
-         * Search Based Algorithm
-         * 
+----Landing Page
+---- Login and Registration Page
+----- Multiple Role Based  Users
+----- Super Admin
+--------- Dashboard
+--------- CRUD Operation
+----------Super Admin can assign role, email,name and password
+------Admin
+------Editor
+------- User
+------------ Dashboard
+-------------Search Based Algorithm 
 
 It's a regulalar based ongoing project . Feel free to fork and learn the feature.
 
@@ -54,17 +53,15 @@ php artisan key:generate
 Update the .env file with your database configuration. You may need to create an empty database before proceeding.
 
 Install the project dependencies using Composer:
-********composer install
+----------composer install
 Run the database migrations:
-********php artisan migrate
+----------php artisan migrate
 Optionally, you can seed the database with sample data (if provided by the project):
-********php artisan db:seed
+---------php artisan db:seed
 Generate the application's asset files:
-********npm install
-********npm run dev
-or
-********yarn install
-********yarn run dev
+---------npm install
+---------npm run dev
+
 Finally, start the Laravel development server:
 php artisan serve
 You should see a message like "Laravel development server started" along with the server's URL. Open that URL in your web browser to access the project.
