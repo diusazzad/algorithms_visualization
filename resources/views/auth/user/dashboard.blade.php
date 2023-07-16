@@ -8,6 +8,7 @@
         <div class="w-3/4" id="main-content">
             <div class="">
                 Hello, Welcome to Algorith visualization .
+                <x-user.algolist/>
             </div>
         </div>
     </div>

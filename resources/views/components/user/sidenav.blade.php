@@ -14,8 +14,7 @@
 
             Community
         </a>
-        <a href="" class="flex items-center px-6 py-2 text-gray-600 hover:bg-gray-200">
-
+        <a href="{{ route('user.tasks.index') }}" class="flex items-center px-6 py-2 text-gray-600 hover:bg-gray-200">
             Task
         </a>
 

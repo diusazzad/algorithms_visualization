@@ -6,7 +6,10 @@
             <x-user.sidenav></x-user.sidenav>
         </div>
         <div class="w-3/4" id="main-content">
-           Task
+            <h1>Task Details</h1>
+            <h2>{{ $task->title }}</h2>
+            <p>{{ $task->description }}</p>
+            <p>Created At: {{ $task->created_at }}</p>
         </div>
     </div>
 @endsection
