@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\SuperAdminController;
 use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\SuperAdminRoleController;
 use App\Http\Controllers\User\AlgorithmController;
+use App\Http\Controllers\User\AlgorithmVisualization;
 use App\Http\Controllers\User\DashboardController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\TaskController;
@@ -71,6 +72,8 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::prefix('/user/dashboard')->name('user.')->group(function () {
         Route::resource('/tasks', TaskController::class);
     });
+    // learn
+    Route::get('/user/dashboard/learn',[AlgorithmVisualization::class,'index'])->name('user.learn');
     // Profile
     Route::get('/user/dashboard/profile', [ProfileController::class, 'profile'])->name('user.profile'); //Profile
     Route::get('/user/dashboard/settings', [ProfileController::class, 'settings'])->name('user.settings'); //Setting

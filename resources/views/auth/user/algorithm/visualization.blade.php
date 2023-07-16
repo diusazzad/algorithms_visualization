@@ -6,10 +6,7 @@
             <x-user.sidenav></x-user.sidenav>
         </div>
         <div class="w-3/4" id="main-content">
-            <div class="">
-                <x-algorithm.linear-search />
-
-            </div>
+            learn
         </div>
     </div>
 @endsection

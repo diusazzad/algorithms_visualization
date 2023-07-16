@@ -26,6 +26,13 @@
 
             Settings
         </a>
+        <a href="{{ route('user.learn') }}" class="flex items-center px-6 py-2 text-gray-600 hover:bg-gray-200">
+
+           Learn
+        </a>
+        <a href="" class="flex items-center px-6 py-2 text-gray-600 hover:bg-gray-200">
+           Mathematics
+        </a>
 
 
 
