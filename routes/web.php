@@ -12,11 +12,41 @@ use App\Http\Controllers\User\AlgorithmVisualization;
 use App\Http\Controllers\User\DashboardController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\TaskController;
+use App\Http\Controllers\VisitController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    $cacheKey = 'welcome_page';
+
+    // Check if the cached view exists
+    if (Cache::has($cacheKey)) {
+        // Retrieve the cached view and return it
+        $view = Cache::get($cacheKey);
+        return $view;
+    }
+
+    // Render the view
+    $view = view('welcome')->render();
+
+    // Store the view in the cache
+    Cache::put($cacheKey, $view, 60); // Cache for 60 seconds
+
+    return $view;
+});
+
+Route::get('/', [VisitController::class, 'trackVisit'])->name('home');
+
+
+
+Route::get('/visit-count', function () {
+    $visitCount = App\Models\Visit::count();
+    return response()->json(['count' => $visitCount]);
 });
 
 
@@ -73,7 +103,7 @@ Route::middleware(['auth', 'role:user'])->group(function () {
         Route::resource('/tasks', TaskController::class);
     });
     // learn
-    Route::get('/user/dashboard/learn',[AlgorithmVisualization::class,'index'])->name('user.learn');
+    Route::get('/user/dashboard/learn', [AlgorithmVisualization::class, 'index'])->name('user.learn');
     // Profile
     Route::get('/user/dashboard/profile', [ProfileController::class, 'profile'])->name('user.profile'); //Profile
     Route::get('/user/dashboard/settings', [ProfileController::class, 'settings'])->name('user.settings'); //Setting

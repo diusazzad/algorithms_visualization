@@ -1,41 +1,56 @@
-<div class="m-3 border ">
-    <canvas id="chart-container"></canvas>
+<div class="border m-3 pl-3 h-fit">
+    <div class="">
+        <h10 class="text-center">Linear Search</h1>
+        <label for="arrayInput">Array:</label>
+        <input class="border rounded-xl p-1" type="text" id="arrayInput">
+    </div>
+    <div>
+        <label class="" for="targetInput">Target Value:</label>
+        <input class="mt-1 border " type="text" id="targetInput">
+    </div>
+    <button class="border rounded-xl p-1" onclick="linearSearch()">Search</button>
+    <div>
+        <canvas id="chartContainer"></canvas>
+    </div>
+    <div id="result"></div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    // Get chart container element
-    const chartContainer = document.getElementById('chart-container');
+    function linearSearch() {
+        const arrayInput = document.getElementById('arrayInput').value;
+        const targetInput = document.getElementById('targetInput').value;
 
-    // Generate random graph data
-    function generateGraphData() {
-        const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
-        const data = [5, 3, 7, 2, 6, 4];
-        return { labels, data };
-    }
+        // Convert input string to array of numbers
+        const array = arrayInput.split(',').map(Number);
 
-    // Generate random colors for each data point
-    function generateRandomColors(length) {
-        const colors = [];
-        for (let i = 0; i < length; i++) {
-            const color = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.7)`;
-            colors.push(color);
+        // Perform linear search
+        const indices = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === Number(targetInput)) {
+                indices.push(i);
+            }
         }
-        return colors;
-    }
 
-    // Generate chart
-    function generateChart() {
-        const graphData = generateGraphData();
+        // Display search result
+        const result = document.getElementById('result');
+        if (indices.length > 0) {
+            result.textContent = `Target value found at indices: ${indices.join(', ')}`;
+        } else {
+            result.textContent = 'Target value not found in the array';
+        }
 
         // Create chart
+        const chartContainer = document.getElementById('chartContainer');
         new Chart(chartContainer, {
             type: 'bar',
             data: {
-                labels: graphData.labels,
+                labels: array.map((value, index) => index.toString()),
                 datasets: [{
-                    data: graphData.data,
-                    backgroundColor: generateRandomColors(graphData.data.length),
+                    data: array,
+                    backgroundColor: array.map((value) => value === Number(targetInput) ?
+                        'rgba(255, 0, 0, 0.7)' : 'rgba(0, 0, 255, 0.7)'),
                 }],
             },
             options: {
@@ -48,7 +63,4 @@
             },
         });
     }
-
-    // Generate initial chart
-    generateChart();
 </script>
