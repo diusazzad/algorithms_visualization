@@ -5,6 +5,7 @@
     <form action="{{ route('auth.login') }}" method="POST">
         @csrf
         <div class="">
+            <h1>recapcha = not done</h1>
             <label for="email">Email</label>
             <input class="border-2 border-black" type="email" name="email" id="email">
         </div>
