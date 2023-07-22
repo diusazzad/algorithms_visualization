@@ -17,18 +17,18 @@
     <link rel="stylesheet" href="{{ asset('welcome/css/welcome.css') }}">
     <p class="hidden sm:block">Visit Count: {{ $visitCount }}</p>
     {{--
-        max-sm	@media not all and (min-width: 640px) { ... }
-        max-md	@media not all and (min-width: 768px) { ... }
-        max-lg	@media not all and (min-width: 1024px) { ... }
-        max-xl	@media not all and (min-width: 1280px) { ... }
-        max-2xl	@media not all and (min-width: 1536px) { ... }
+        sm: Small screens (640px and above)
+        md: Medium screens (768px and above)
+        lg: Large screens (1024px and above)
+        xl: Extra-large screens (1280px and above)
+        2xl: Larger screens (1536px and above)
      --}}
 </head>
 
 <body class="">
-    <div class="">
+    {{-- <div class="">
         <x-welcome.cookie />
-    </div>
+    </div> --}}
 
     <div class="main">
         <div class="" id="NavBar">
@@ -36,12 +36,12 @@
                 <x-welcome.dark-mode />
             </x-welcome.nav-bar>
         </div>
-        <div class="">
+        {{-- <div class="">
             <x-welcome.header />
         </div>
         <div class="grid grid-cols-3 border p-1">
             <div class="">
-                
+
             </div>
             <div class="">
 
@@ -53,7 +53,7 @@
 
         <div class="">
             <x-welcome.footer />
-        </div>
+        </div> --}}
     </div>
 
 

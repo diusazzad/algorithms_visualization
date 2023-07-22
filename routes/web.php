@@ -113,10 +113,6 @@ Route::middleware(['auth', 'role:user'])->group(function () {
 
 
 
-Route::get('/test', function () {
-    return view('test.index');
-});
-
 Route::fallback(function () {
     return view('error');
 });
