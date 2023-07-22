@@ -47,13 +47,4 @@
     </script>
 @endsection
 
-{{-- <div class="grid grid-cols-2 p-3 w-full h-full">
-    <div class="border-2 border-black h-96">
-        <div>Your Task</div>
-        <div>Todays'data</div>
-        <div>Enjoy</div>
-    </div>
-    <div class="border-2 border-black h-96">al;dsjf;asdsf;lasjd;l</div>
-    <div class="border-2 border-black h-96">al;dsjf;asdsf;lasjd;l</div>
-    <div class="border-2 border-black h-96">al;dsjf;asdsf;lasjd;l</div>
-</div> --}}
+

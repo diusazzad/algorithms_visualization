@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>Algorithm Visualization</title>
+    <link rel="stylesheet" href="{{ asset('auth/login/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('auth/login/register.css') }}">
     @vite('resources/css/app.css')
 </head>
 
@@ -25,4 +27,7 @@
     </div>
 </body>
 
+
 </html>
+<script src="{{ asset('auth/login/login.js') }}"></script>
+<script src="{{ asset('auth/login/register.js') }}"></script>

@@ -23,6 +23,65 @@
         xl: Extra-large screens (1280px and above)
         2xl: Larger screens (1536px and above)
      --}}
+
+    {{--
+  - Header
+  - Logo
+  - Navigation Menu
+    - Home
+    - About Us
+    - Services
+    - Portfolio
+    - Contact Us
+- Hero Section
+  - Main Heading
+  - Subheading
+  - Call-to-Action Button
+- Features Section
+  - Feature 1
+  - Feature 2
+  - Feature 3
+- About Us Section
+  - Image/Icon
+  - Title
+  - Description
+- Services Section
+  - Service 1
+  - Service 2
+  - Service 3
+- Portfolio Section
+  - Project 1
+    - Image/Thumbnail
+    - Project Name
+    - Description
+  - Project 2
+    - Image/Thumbnail
+    - Project Name
+    - Description
+  - Project 3
+    - Image/Thumbnail
+    - Project Name
+    - Description
+- Testimonials Section
+  - Testimonial 1
+    - Name
+    - Role
+    - Testimonial Text
+  - Testimonial 2
+    - Name
+    - Role
+    - Testimonial Text
+- Contact Us Section
+  - Contact Form
+    - Name
+    - Email
+    - Message
+    - Submit Button
+- Footer
+  - About Us
+  - Latest News
+  - Contact Us
+  - Social Media Icons --}}
 </head>
 
 <body class="">
