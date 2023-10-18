@@ -1,0 +1,11 @@
+{
+    "name": "LinkedList",
+    "alias": "linkedlist",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\LinkedList\\Providers\\LinkedListServiceProvider"
+    ],
+    "files": []
+}

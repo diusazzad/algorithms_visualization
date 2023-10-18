@@ -1,0 +1,11 @@
+{
+    "name": "Registration",
+    "alias": "registration",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Registration\\Providers\\RegistrationServiceProvider"
+    ],
+    "files": []
+}
