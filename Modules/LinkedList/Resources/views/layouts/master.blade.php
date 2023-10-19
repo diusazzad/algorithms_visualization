@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Module LinkedList</title>
-
+        <script src="https://cdn.tailwindcss.com"></script>
        {{-- Laravel Vite - CSS File --}}
        {{-- {{ module_vite('build-linkedlist', 'Resources/assets/sass/app.scss') }} --}}
 

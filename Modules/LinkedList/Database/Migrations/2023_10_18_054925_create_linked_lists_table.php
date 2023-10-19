@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('linked_lists', function (Blueprint $table) {
             $table->id();
-            // $table->string('value')->default(''); // Provide a default value, but it's not a suitable solution for linked lists.
             $table->string('value');
+            $table->unsignedBigInteger('next_id')->nullable();
+            $table->unsignedBigInteger('previous_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('next_id')->references('id')->on('linked_lists');
+            $table->foreign('previous_id')->references('id')->on('linked_lists');
         });
     }
 
