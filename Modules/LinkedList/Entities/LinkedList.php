@@ -12,15 +12,18 @@ class linkedList extends Model
 
     protected $fillable = [
         'value',
+        'next_id',
+        'previous_id',
     ];
+
     public function next()
     {
-        return $this->belongsTo(linkedList::class, 'next_id');
+        return $this->belongsTo(LinkedList::class, 'next_id');
     }
 
     public function previous()
     {
-        return $this->belongsTo(linkedList::class, 'previous_id');
+        return $this->belongsTo(LinkedList::class, 'previous_id');
     }
 
     protected static function newFactory()

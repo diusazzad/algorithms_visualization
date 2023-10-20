@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('linked_lists', function (Blueprint $table) {
             $table->id();
-            $table->string('value');
+            $table->string('value')->default('');
             $table->unsignedBigInteger('next_id')->nullable();
             $table->unsignedBigInteger('previous_id')->nullable();
             $table->timestamps();

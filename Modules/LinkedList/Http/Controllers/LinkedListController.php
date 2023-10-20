@@ -24,9 +24,50 @@ class LinkedListController extends Controller
      * Show the form for creating a new resource.
      * @return Renderable
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('linkedlist::create');
+    //   // Create a new linked list node
+    //   $linkedList = new linkedList();
+
+    //   // Save the linked list node to the database
+    //   $linkedList->save();
+
+    //   // Return the linked list node
+    //   return response()->json(['message' => 'Linked list created successfully'], 201);
+ // Validate the value parameter
+    $request->validate([
+        'value' => 'required',
+    ]);
+
+// Create a new linked list node
+$linkedList = LinkedList::create([
+    'value' => $request->input('value'),
+]);
+
+// Redirect to the index() function
+return redirect()->route('linked-list.index');
+}
+    public function add($value)
+    {
+        // Find the linked list node to add the element to
+        $linkedList = LinkedList::find($value);
+
+        // If the linked list node does not exist, return an error
+        if (!$linkedList) {
+            return response()->json(['message' => 'Linked list not found'], 404);
+        }
+
+        // Create a new linked list node
+        $newNode = new LinkedList([
+            'value' => $value,
+            'next_id' => $linkedList->id,
+        ]);
+
+        // Save the new linked list node to the database
+        $newNode->save();
+
+        // Return the new linked list node
+        return response()->json(['message' => 'Element added successfully'], 201);
     }
 
     /**

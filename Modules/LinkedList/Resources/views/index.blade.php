@@ -1,15 +1,18 @@
 @extends('linkedlist::layouts.master')
 
 @section('content')
-    <h1>Linked Lists</h1>
+    <div class="container">
+        <h1>Create Linked List</h1>
 
-    <ul>
-        @foreach ($linkedLists as $linkedList)
-            <li>
-                <a href="{{ route('linkedlist.show', $linkedList) }}">{{ $linkedList->value }}</a>
-            </li>
-        @endforeach
-    </ul>
+        <form action="{{ route('linked-list.store') }}" method="post">
+            @csrf
 
-    <a href="{{ route('linkedlist.create') }}">Create New Linked List</a>
+            <div class="form-group">
+                <label for="value">Value</label>
+                <input type="text" name="value" id="value" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 @endsection
