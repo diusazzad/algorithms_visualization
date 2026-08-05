@@ -13,9 +13,16 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: 🔨 Install dependencies and build
         run: |
+            rm -rf node_modules package-lock.json
             npm install --legacy-peer-deps
+            chmod +x node_modules/.bin/vite
             npm run build
 
       - name: 📂 Sync files
